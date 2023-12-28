@@ -7,9 +7,9 @@ Have a rough decision to make? Can't make up your mind? Use the LCDM to randomly
 
 There's no harm in letting a computer program run your life, probably.
 
-</hr>
+Live website can be found here: https://lcdm.dx.am/
 
-LCDM Repo
+**LCDM Repo**
 
 This is a very simple repo!
 
