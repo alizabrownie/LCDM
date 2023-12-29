@@ -22,6 +22,8 @@ submit.js - this is the script for the random number generator and is called upo
 
 Other than that, just images and google tags.
 
+**The live website version is kept up to date with the master branch.**
+
 TODO:<br/>
 Make mobile friendly<br/>
 Add sounds<br/>
