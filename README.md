@@ -14,8 +14,14 @@ Live website can be found here: https://lcdm.dx.am/
 This is a very simple repo!
 
 index.html - this is the homepage and embeds ALL JS scripts inside of it
-
-We can separate the scripts if we want to for easier editing.
+mainCss.css - this is the style sheet for the homepage
+footerLinks.js - these are the simple scripts for the footer popups
+submit.js - this is the script for the random number generator and is called upon when "discovering your doom" 
 
 Other than that, just images and google tags.
+
+TODO:
+Make mobile friendly
+Add sounds
+Add skins 
 
