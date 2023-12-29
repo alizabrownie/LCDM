@@ -1,3 +1,16 @@
+/*
+
+  _    ___ ___  __  __    ___         _     
+ | |  / __|   \|  \/  |  / __|___  __| |___ 
+ | |_| (__| |) | |\/| | | (__/ _ \/ _` / -_)
+ |____\___|___/|_|  |_|  \___\___/\__,_\___|
+                                             © AlizaBrown aka Messier
+
+All code is original, a simple, three way number randomizing program.
+Font creds: KnackpackStudio
+
+*/
+
 function submit() {
     //getid vars are for replacing HTML with the puedo var values
     var getid = document.getElementById("eochoice");

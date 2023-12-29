@@ -1,3 +1,15 @@
+/*
+
+  _    ___ ___  __  __    ___         _     
+ | |  / __|   \|  \/  |  / __|___  __| |___ 
+ | |_| (__| |) | |\/| | | (__/ _ \/ _` / -_)
+ |____\___|___/|_|  |_|  \___\___/\__,_\___|
+                                             © AlizaBrown aka Messier
+
+All code is original, a simple, three way number randomizing program.
+Font creds: KnackpackStudio
+
+*/
 
 function func1() {
     document.getElementById("info").innerHTML = "This site does NOT use cookies, track any user data (Google Analytics) or store IP addresses. All scripts are embedded within this site. Once the page loads, you are secure. However this site does NOT use SSL, so as long as you do not put credit card numbers into it (ummmm, why would you anyway?), you will be fine. Paranoia is strong my friend. Feel free to check the source code if you want peace of mind.";
