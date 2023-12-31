@@ -22,6 +22,13 @@ Font creds: KnackpackStudio
     <meta name="author" content="Aliza Brown">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="mainCss.css" />
+    <style>
+        /* Define styles for the animated GIF */
+        #clickGif {
+          position: absolute;
+          pointer-events: none; /* Ensure the GIF doesn't interfere with clicks */
+        }
+      </style>
 </head>
 
 <body>
@@ -79,7 +86,41 @@ Font creds: KnackpackStudio
     </div>
     <div id="info" style="">
     </div>
+
+    <audio id="clickSound1" src="wetfart.mp3"></audio>
+    <audio id="clickSound2" src="dryfart.mp3"></audio>
+    <div id="clickGif"></div>
+    <script>
+        document.addEventListener('click', function (event) {
+            var randomSound = Math.random() < 0.5 ? document.getElementById('clickSound1') : document.getElementById('clickSound2');
+
+            // Check if the selected audio element is supported
+            if (randomSound) {
+                randomSound.pause();
+                randomSound.currentTime = 0;
+                randomSound.play();
+            }
+
+            // Create a new image element for the animated GIF
+            var gif = document.createElement('img');
+            gif.src = 'poot.gif'; // Replace with your own GIF path
+            gif.id = 'clickGif';
+
+            // Set the initial position of the GIF near the cursor
+            gif.style.left = (event.clientX - 25) + 'px'; // Adjust the offset as needed
+            gif.style.top = (event.clientY - 25) + 'px'; // Adjust the offset as needed
+
+            // Append the GIF to the body
+            document.body.appendChild(gif);
+
+            // Remove the GIF after a short delay (e.g., 1000 milliseconds)
+            setTimeout(function () {
+                document.body.removeChild(gif);
+            }, 1000); // Adjust the delay as needed
+        });
+    </script>
     <script src="submit.js"></script>
     <script src="footerLinks.js"></script>
 </body>
+
 </html>
