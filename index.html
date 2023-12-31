@@ -24,10 +24,10 @@ Font creds: KnackpackStudio
     <link rel="stylesheet" type="text/css" href="mainCss.css" />
     <style>
         #clickGif {
-          position: absolute;
-          pointer-events: none;  
+            position: absolute;
+            pointer-events: none;
         }
-      </style>
+    </style>
 </head>
 
 <body>
@@ -92,30 +92,25 @@ Font creds: KnackpackStudio
     <script>
         document.addEventListener('click', function (event) {
             var randomSound = Math.random() < 0.5 ? document.getElementById('clickSound1') : document.getElementById('clickSound2');
-
-            // Check if the selected audio element is supported
             if (randomSound) {
                 randomSound.pause();
                 randomSound.currentTime = 0;
                 randomSound.play();
             }
-
-            // Create a new image element for the animated GIF
             var gif = document.createElement('img');
-            gif.src = 'poot.gif'; // Replace with your own GIF path
+            gif.src = 'poot.gif';  
             gif.id = 'clickGif';
 
-            // Set the initial position of the GIF near the cursor
-            gif.style.left = (event.clientX - 25) + 'px'; // Adjust the offset as needed
-            gif.style.top = (event.clientY - 25) + 'px'; // Adjust the offset as needed
+            var scrollX = window.scrollX || window.pageXOffset;
+            var scrollY = window.scrollY || window.pageYOffset;
 
-            // Append the GIF to the body
+            gif.style.left = (event.clientX - 25) + 'px';  
+            gif.style.top = (event.clientY - 25) + 'px';  
+
             document.body.appendChild(gif);
-
-            // Remove the GIF after a short delay (e.g., 1000 milliseconds)
             setTimeout(function () {
                 document.body.removeChild(gif);
-            }, 1000); // Adjust the delay as needed
+            }, 1000);  
         });
     </script>
     <script src="submit.js"></script>
