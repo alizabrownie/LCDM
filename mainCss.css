@@ -206,4 +206,8 @@ button:hover {
         font-size: .8em;
         padding: 15px;
     }
+    #clickGif {
+        position: absolute;
+        pointer-events: none;  
+      }
 }
