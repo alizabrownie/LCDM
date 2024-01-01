@@ -20,7 +20,7 @@ mainCss.css - this is the style sheet for the homepage<br/>
 footerLinks.js - these are the simple scripts for the footer popups<br/>
 submit.js - this is the script for the random number generator and is called upon when "discovering your doom" <br/>
 
-Other than that, just images and google tags.
+Other than that, just images and google tags ... and ... other stuff, _nostalgic_ stuff 
 
 **The live website version is kept up to date with the master branch.**
 
