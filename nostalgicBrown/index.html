@@ -5,9 +5,60 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>title</title>
+    <title>N O S T A L G I A</title>
+    <style>
+        /* Define styles for click gif */
+        #clickGif {
+            position: absolute;
+            pointer-events: none;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <h1>Nathan's Awesome Projects!!</h1>
+    <br />
+    <h4>Cool NASA Vidoe</h4>
+    <iframe width="560" height="315" src="drone.mp4" frameborder="0" allowfullscreen></iframe>
+    <br />
+    <h4>Awesome Rap Video!!</h4>
+    <iframe width="560" height="315" src="song.mp4" frameborder="0" allowfullscreen></iframe>
+    <br />
+    <h4>Particles :o</h4>
+    <iframe width="560" height="315" src="cylinder.mp4" frameborder="0" allowfullscreen></iframe>
+    <br />
+    <h4>Impressive middel school work</h4>
+    <br />
+    <audio id="clickSound1" src="cottonEyeJoe.mp3"></audio>
+    <div id="clickGif"></div>
+    <script>
+        document.addEventListener('click', function (event) {
+            var randomSound = Math.random() < 0.5 ? document.getElementById('clickSound1') : document.getElementById('clickSound1');
+
+            // Check if the selected audio element is supported
+            if (randomSound) {
+                randomSound.pause();
+                randomSound.currentTime = 0;
+                randomSound.play();
+            }
+
+            // Create a new image element for the animated GIF
+            var gif = document.createElement('img');
+            gif.src = '1251266_Concentric+CirclesA.gif'; // Replace with your own GIF path
+            gif.id = 'clickGif';
+
+            // Set the initial position of the GIF near the cursor
+            gif.style.left = (event.clientX) + 'px'; // Adjust the offset as needed
+            gif.style.top = (event.clientY) + 'px'; // Adjust the offset as needed
+
+            // Append the GIF to the body
+            document.body.appendChild(gif);
+
+            // Remove the GIF after a short delay (e.g., 1000 milliseconds)
+            setTimeout(function () {
+                document.body.removeChild(gif);
+            }, 1000); // Adjust the delay as needed
+        });
+    </script>
 </body>
 </html>
