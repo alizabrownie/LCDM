@@ -39,12 +39,11 @@ Font creds: KnackpackStudio
     <br />
     <div class="decisions">
         Choice A: <input type="text" id="choice1" placeholder="Enter a Choice" value="" /><br />
-        Choice B: <input type="text" id="choice2" placeholder="Enter Another Choice" value="" />
-            
-        <div style="text-align:center;">
-            <button class="addOptionButton" onclick="X()">+</button>
-            <button id="button" onclick="submit()">Discover Your Doom</button>
-        </div>
+        Choice B: <input type="text" id="choice2" placeholder="Enter Another Choice" value="" /><br/>
+    </div>
+    <div style="text-align:center;">
+        <button class="addOptionButton" onclick="addChoiceField()">+</button>
+        <button id="button" onclick="submit()">Discover Your Doom</button>
     </div>
     <div class="answers">
         <div id="number">
@@ -81,7 +80,7 @@ Font creds: KnackpackStudio
     </div>
     <div id="info" style="">
     </div>
-    <script src="submit.js"></script>
+    <script src="multipleOptionAlg.js"></script>
     <script src="footerLinks.js"></script>
 </body>
 

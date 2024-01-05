@@ -11,6 +11,25 @@ X number of options algorithm
 
 */
 
+
+// This function is called by the addOptionButton
+// It adds a new form field to the html page when user wants to input a new choice
+function addChoiceField() {
+    var decisionsContainer = document.querySelector('.decisions');
+    var nextChoiceLabel = String.fromCharCode('A'.charCodeAt(0) + decisionsContainer.children.length / 2);
+
+    var newChoiceLabel = document.createTextNode('Choice ' + nextChoiceLabel + ': ');
+
+    var newChoiceInput = document.createElement('input');
+    newChoiceInput.type = 'text';
+    newChoiceInput.placeholder = 'Enter Another Choice ';
+
+    decisionsContainer.appendChild(newChoiceLabel); // letters
+    decisionsContainer.appendChild(newChoiceInput); // form field
+    decisionsContainer.appendChild(document.createElement('br')); // break
+}
+
+
 function submitMultiple() {
     //getid vars are for replacing HTML with the puedo var values
     var getid = document.getElementById("eochoice");
