@@ -58,7 +58,7 @@ p {
 
 }
 
-button {
+#button {
     padding: 10px;
     background: black;
     margin: 15px;
@@ -72,10 +72,27 @@ button {
     content: "";
 }
 
-button:hover {
+#button:hover {
     color: black;
     background: #b4b0b0;
 }
+
+.addOptionButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(100, 100, 100);  
+    color: #ffffff;  
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .addOptionButton:hover {
+    background-color: rgb(255, 255, 255);
+    color:black;
+  }
 
 .intro {
     padding: 25px;

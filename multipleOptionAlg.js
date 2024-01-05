@@ -11,7 +11,7 @@ X number of options algorithm
 
 */
 
-function submit() {
+function submitMultiple() {
     //getid vars are for replacing HTML with the puedo var values
     var getid = document.getElementById("eochoice");
     var getid2 = document.getElementById("checkeo");
