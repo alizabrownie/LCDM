@@ -27,9 +27,39 @@ function addChoiceField() {
     decisionsContainer.appendChild(newChoiceLabel); // letters
     decisionsContainer.appendChild(newChoiceInput); // form field
     decisionsContainer.appendChild(document.createElement('br')); // break
+
+    var eoBool = checkEvenOdd(); // returns either 1 or 0, odd or even
+
+    // enter the respective algorithm
+    if (eoBool == 0){
+        console.log("even")
+        evenAlgorithm();
+    }
+    else {
+        console.log("odd")
+        oddAlgorithm();
+    }
 }
 
+// This checks if even or odd # of options
+// Returns 0 is even 1 is odd
+function checkEvenOdd() {
+    var choices = document.querySelectorAll('.decisions input[type="text"]');
+    var result = (choices.length % 2 === 0) ? "Even" : "Odd";
+    var result = (result == "Even") ? 0 : 1;
+    console.log(result);
+    return result;
+}
 
+function evenAlgorithm() {
+    
+}
+
+// ---------------------------------------------- OLD CODE BELOW
+
+
+
+// This is the multiple choice algorithm and called when #button is pressed
 function submitMultiple() {
     //getid vars are for replacing HTML with the puedo var values
     var getid = document.getElementById("eochoice");
