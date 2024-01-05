@@ -11,6 +11,9 @@ X number of options algorithm
 
 */
 
+// This is for the IDs (choiceX) within the .decisions where X is replaced with the INT value
+// It starts a 3 because there will ALWAYS be a minimum of 2 choices
+var fieldCounter = 3;
 
 // This function is called by the addOptionButton
 // It adds a new form field to the html page when user wants to input a new choice
@@ -23,22 +26,13 @@ function addChoiceField() {
     var newChoiceInput = document.createElement('input');
     newChoiceInput.type = 'text';
     newChoiceInput.placeholder = 'Enter Another Choice ';
+    newChoiceInput.id = 'choice' + fieldCounter;
+
+    fieldCounter++;
 
     decisionsContainer.appendChild(newChoiceLabel); // letters
     decisionsContainer.appendChild(newChoiceInput); // form field
     decisionsContainer.appendChild(document.createElement('br')); // break
-
-    var eoBool = checkEvenOdd(); // returns either 1 or 0, odd or even
-
-    // enter the respective algorithm
-    if (eoBool == 0){
-        console.log("even")
-        evenAlgorithm();
-    }
-    else {
-        console.log("odd")
-        oddAlgorithm();
-    }
 }
 
 // This checks if even or odd # of options
@@ -47,17 +41,162 @@ function checkEvenOdd() {
     var choices = document.querySelectorAll('.decisions input[type="text"]');
     var result = (choices.length % 2 === 0) ? "Even" : "Odd";
     var result = (result == "Even") ? 0 : 1;
-    console.log(result);
     return result;
 }
 
-function evenAlgorithm() {
-    
+// This returns ALL user input options into an array for easier usage
+function getAllOptions() {
+    var options = [];
+    var decisionInputs = document.querySelectorAll('.decisions input[type="text"]');
+
+    decisionInputs.forEach(function (input) {
+        options.push(input.value);
+    });
+    return options;
+}
+// Basic random number function
+function rand(min, max) {
+    var rnum = Math.floor(Math.random() * (max - min)) + min;
+    return rnum;
 }
 
-// ---------------------------------------------- OLD CODE BELOW
+// This is the 3 way randomizing function that was original to the LCDM
+// It takes two values, asigns E or O to them randomly, then selects a random number to choose one value to move forward
+function assignPairs(x, y) {
+    rnum = rand(0, 1000000);
+    // do not edit the values of a and b! These are tied to the user inputs
+    var a = x;
+    var b = y;
+    // c and d hold the even and odd associations
+    var c; // associate to a
+    var d; // associate to b
+
+    // START MAIN IF STATEMENT for rnum
+    if (rnum % 2 == 0) {
+        var rnum2 = rand(1, 100000000);
+        if (rnum2 % 2 == 0) {
+            if (rnum3 % 2 == 0) {
+            }
+            else if (rnum3 % 2 != 0) {
+            }
+        }
+        else if (rnum2 % 2 != 0) {
+            var rnum2 = rand(1, 100000000);
+            if (rnum2 % 2 == 0) {
+                var rnum3 = rand(1, 100000000);
+                if (rnum3 % 2 == 0) {
+                    c = "even";
+                    d = "odd";
+                }
+                else if (rnum3 % 2 != 0) {
+                    c = "odd";
+                    d = "even";
+                }
+            }
+            else if (rnum2 % 2 != 0) {
+                var rnum3 = rand(1, 100000000);
+                if (rnum3 % 2 == 0) {
+                    c = "even";
+                    d = "odd";
+                }
+                else if (rnum3 % 2 != 0) {
+                    c = "odd";
+                    d = "even";
+                }
+            }
+        }
+        // MAIN ELSE STATEMENT for rnum
+    }
+    else {
+        var rnum2 = rand(1, 100000000);
+        if (rnum2 % 2 == 0) {
+            var rnum3 = rand(1, 100000000);
+            if (rnum3 % 2 == 0) {
+                c = "even";
+                d = "odd";
+            }
+            else if (rnum3 % 2 != 0) {
+                c = "odd";
+                d = "even";
+            }
+        }
+        else if (rnum2 % 2 != 0) {
+            var rnum3 = rand(1, 100000000);
+            if (rnum3 % 2 == 0) {
+                c = "even";
+                d = "odd";
+            }
+            else if (rnum3 % 2 != 0) {
+                c = "odd";
+                d = "even";
+            }
+        }
+    }
+    var finalResult;
+    finalNum = rand(0, 100000);
+    if (finalNum % 2 == 0) {
+        if (c == "even") {
+            finalResult = x;
+        }
+        else if (d == "even") {
+            finalResult = y;
+        }
+    }
+    else {
+        if (c == "odd") {
+            finalResult = x;
+        }
+        else if (d == "odd") {
+            finalResult = y;
+        }
+    }
+    console.log(finalResult);
+    return finalResult;
+}
+
+// This is the even algorithm
+function evenAlgorithm() {
+    console.log("entering even alg");
+    var allOptions = getAllOptions();
+    console.log(allOptions);
+
+    // while (allOptions.length != 1) {
+
+    // }
+}
+
+function oddAlgorithm() {
+    console.log("entering odd alg");
+}
 
 
+// ---------------------------------------------- MAIN CODE FIRES ----------------------------------------------
+
+// This is the multiple choice algorithm and called when #button is pressed
+function submitMultiple() {
+
+    console.log(assignPairs(4,5));
+
+    var eoBool = checkEvenOdd(); // returns either 1 or 0, odd or even
+    // enter the respective algorithm
+    if (eoBool == 0) {
+        evenAlgorithm();
+    }
+    else {
+        oddAlgorithm();
+    }
+    document.getElementById("button").innerHTML = "Rediscover Your Doom (Try Again)";
+}
+
+
+
+
+
+
+
+// old code below for reference
+
+/*
 
 // This is the multiple choice algorithm and called when #button is pressed
 function submitMultiple() {
@@ -154,3 +293,5 @@ function submitMultiple() {
 }
 //HELPFUL TIP -- [else] & {if}
 //O -> e2 & E -> e1
+
+*/
