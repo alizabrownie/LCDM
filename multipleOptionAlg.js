@@ -61,12 +61,14 @@ function rand(min, max) {
 }
 
 // This is the 3 way randomizing function that was original to the LCDM
-// It takes two values, asigns E or O to them randomly, then selects a random number to choose one value to move forward
-function assignPairs(x, y) {
+// It takes two values (any type), asigns E or O to them randomly, then selects a random number to choose one value to move forward
+// RETURNS the actual value
+function assignPairs([x, y]) {
     rnum = rand(0, 1000000);
+    original = [x,y];
     // do not edit the values of a and b! These are tied to the user inputs
-    var a = x;
-    var b = y;
+    var a = original[0];
+    var b = original[1];
     // c and d hold the even and odd associations
     var c; // associate to a
     var d; // associate to b
@@ -136,18 +138,18 @@ function assignPairs(x, y) {
     finalNum = rand(0, 100000);
     if (finalNum % 2 == 0) {
         if (c == "even") {
-            finalResult = x;
+            finalResult = a;
         }
         else if (d == "even") {
-            finalResult = y;
+            finalResult = b;
         }
     }
     else {
         if (c == "odd") {
-            finalResult = x;
+            finalResult = a;
         }
         else if (d == "odd") {
-            finalResult = y;
+            finalResult = b;
         }
     }
     console.log(finalResult);
@@ -161,7 +163,7 @@ function evenAlgorithm() {
     console.log(allOptions);
 
     // while (allOptions.length != 1) {
-
+    //     // CODE HERE OR BREAKs!
     // }
 }
 
@@ -175,7 +177,7 @@ function oddAlgorithm() {
 // This is the multiple choice algorithm and called when #button is pressed
 function submitMultiple() {
 
-    console.log(assignPairs(4,5));
+    console.log(assignPairs(["ds", "ijfdiofjioj"]));
 
     var eoBool = checkEvenOdd(); // returns either 1 or 0, odd or even
     // enter the respective algorithm
