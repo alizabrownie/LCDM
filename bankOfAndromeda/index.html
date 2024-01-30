@@ -2,21 +2,14 @@
 
 <!--
 
-  _    ___ ___  __  __    ___         _     
- | |  / __|   \|  \/  |  / __|___  __| |___ 
- | |_| (__| |) | |\/| | | (__/ _ \/ _` / -_)
- |____\___|___/|_|  |_|  \___\___/\__,_\___|
-                                             © AlizaBrown aka Messier
-
-All code is original, a simple, three way number randomizing program.
-Font creds: KnackpackStudio
+BANK OF ANDROMEDA HP
 
 -->
 
 <html>
 
 <head>
-    <title>L C D M</title>
+    <title>Bank of Andromeda</title>
     <meta name="description" content="lcdm">
     <meta name="keywords" content="lcdm,decisions">
     <meta name="author" content="Aliza Brown">
@@ -27,61 +20,34 @@ Font creds: KnackpackStudio
 <body>
     <div class="intro">
         <img src="logo.png" />
-        <h1><img src="full.png" /></h1>
-        <h4>For when you just can't decide...</h4>
-        <p>Have a rough decision to make? Can't make up your mind? Use the LCDM to randomly select between two choices,
-            whether it be what food you want to eat to which college you want to attend. Let the LCDM take care of it
-            for you.
-            <br /><br />There's no harm in letting a computer program run your life, probably.
+        <p>Welcome to the Bank of Andromeda (BoA).
+            <br /><br />This bank is tied directly to the Andromeda Black Hole system located in the Andromeda galaxy.
+            It is run by Daddy Zuck, Alozo and NB. <br />This bank is SUPER secure and can only be accessed within 1500. <br/>Please contact Ryan Beaver for customer service. Calls may be delayed due to the wormhole being down.
     </div>
-    <hr
-        style="opacity: .6;border:none;color:white;height:1px;background:black;background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#fff), to(#8a8a8a));" />
-    <br />
-    <div class="decisions">
-        Choice A: <input type="text" id="choice1" placeholder="Enter a Choice" value="" /><br />
-        Choice B: <input type="text" id="choice2" placeholder="Enter Another Choice" value="" /><br/>
-    </div>
-    <div style="text-align:center;">
-        <button class="addOptionButton" onclick="addChoiceField()">+</button>
-        <button id="button" onclick="submitMultiple()">Discover Your Doom</button>
-    </div>
-    <div class="answers">
-        <div id="number">
-            <h2>
-                Your Random Numbers are...<br />
-                <hr
-                    style="opacity: .6;border:none;color:white;height:1px;background:black;background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#fff), to(#000));" />
-                <h3 id="rplace">X
-                    <h2 id="rplace2">Y
-                        <h1 id="rplace3">Z
 
-                        </h1>
-                    </h2>
-                </h3>
-            </h2>
-            <div id="checkeo">
-                Your Key
-            </div>
-        </div>
-        <div id="doom">
-            <h2 style="text-align:center;">Your Fate Says...</h2>
-            <p id="eochoice">
+    <div class="BoA">
+        <table>
+            <thead>
+                <tr>
+                    <th>AB</th>
+                    <th>NB</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="numericInput">Amount Paid:</label>
+                        <input type="number" id="numericInput" name="numericInput">
+                    </td>
+                    <td><label for="numericInput">Amount Paid:</label>
+                        <input type="number" id="numericInput" name="numericInput"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">This is where math goes</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-            </p>
-        </div>
-    </div>
-    <div id="footer">
-        <a class="pop" onclick="func1()">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="pop" onclick="func3()">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="https://goo.gl/forms/lFjgsIyYmwinGbGy1"
-            target="_new">Feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-        <a class="pop" onclick="func2()">Changes</a>
-        <span id="cr" style="text-align:right;float:right;font-size:.8em;">&copy 2018, ABMessier</span>
-    </div>
-    <div id="info" style="">
-    </div>
-    <script src="multipleOptionAlg.js"></script>
-    <script src="footerLinks.js"></script>
 </body>
 
 </html>

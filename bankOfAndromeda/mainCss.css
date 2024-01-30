@@ -1,18 +1,11 @@
 /*
 
-  _    ___ ___  __  __    ___         _     
- | |  / __|   \|  \/  |  / __|___  __| |___ 
- | |_| (__| |) | |\/| | | (__/ _ \/ _` / -_)
- |____\___|___/|_|  |_|  \___\___/\__,_\___|
-                                             © AlizaBrown aka Messier
-
-All code is original, a simple, three way number randomizing program.
-Font creds: KnackpackStudio
+BANK OF ANDROMEDA CSS
 
 */
 
 body {
-    background: url('astrocapy.png');
+    background: url('capyinspace.jpg');
     padding: 10px;
     margin: 25px;
     color: white;
@@ -58,6 +51,22 @@ p {
 
 }
 
+table{
+    text-align: center;
+    padding: 5%;
+    border: 1px solid black;
+}
+
+.BoA {
+    text-align: center;
+    width: 45%;
+    float: left;
+    margin-bottom: 55px;
+    font-size: .9em;
+    color: #dcd8d8;
+    
+}
+
 #button {
     padding: 10px;
     background: black;
@@ -96,7 +105,7 @@ p {
 
 .intro {
     padding: 25px;
-    background: rgba(27, 29, 28, 0.4);
+    background: rgba(27, 29, 28, 0.6);
     border-radius: 5px;
     text-align: center;
     color: #e0e0e0;
