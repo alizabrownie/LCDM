@@ -67,6 +67,10 @@ table{
     
 }
 
+.numeric_field{
+    width: 150px;
+}
+
 #button {
     padding: 10px;
     background: black;

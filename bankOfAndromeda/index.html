@@ -22,29 +22,46 @@ BANK OF ANDROMEDA HP
         <img src="logo.png" />
         <p>Welcome to the Bank of Andromeda (BoA).
             <br /><br />This bank is tied directly to the Andromeda Black Hole system located in the Andromeda galaxy.
-            It is run by Daddy Zuck, Alozo and NB. <br />This bank is SUPER secure and can only be accessed within 1500. <br/>Please contact Ryan Beaver for customer service. Calls may be delayed due to the wormhole being down.
+            It is run by Daddy Zuck, Alozo and NB. <br />This bank is SUPER secure and can only be accessed within 1500.
+            <br />Please contact Ryan Beaver for customer service. Calls may be delayed due to the wormhole being down.
     </div>
 
     <div class="BoA">
-        <table>
-            <thead>
-                <tr>
-                    <th>AB</th>
-                    <th>NB</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><label for="numericInput">Amount Paid:</label>
-                        <input type="number" id="numericInput" name="numericInput">
-                    </td>
-                    <td><label for="numericInput">Amount Paid:</label>
-                        <input type="number" id="numericInput" name="numericInput"></td>
-                </tr>
-                <tr>
-                    <td colspan="2">This is where math goes</td>
-                </tr>
-            </tbody>
+        <table id="user_input">
+            <tr class="input_row">
+                <td>
+                    <select name="payer">
+                        <option value="aBrown" selected>A Brown xx5408</option>
+                        <option value="nBrown">N Brown xx5792</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
+                <td><input type="number" name="total_paid" placeholder="$0.00" class="numeric_field"></td>
+                <td><input type="number" name="ind_contribution" placeholder="$0.00" class="numeric_field"></td>
+                <td><input type="text" name="description" placeholder="Short Transaction Description"></td>
+                <td><select name="category">
+                        <option value="travel" selected>Travel</option>
+                        <option value="food">Food</option>
+                        <option value="activities">Activities</option>
+                        <option value="gas">Gas</option>
+                    </select></td>
+            </tr>
+            <tr id="additionalRow">
+                <td colspan="5">
+                    <script src="BoA_submit.js"></script>
+                    <button id="button" onclick="BoA_submit()">Submit</button>
+                </td>
+            </tr>
+        </table>
+        <h2>Transaction History</h2>
+        <table id="transaction_table">
+            <tr>
+                <td>Acount</td>
+                <td>Total Paid</td>
+                <td>Individual Contribution</td>
+                <td>Description</td>
+                <td>Category</td>
+            </tr>
         </table>
     </div>
 
