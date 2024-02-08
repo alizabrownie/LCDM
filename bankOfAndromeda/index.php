@@ -27,6 +27,7 @@ BANK OF ANDROMEDA HP
     </div>
 
     <div class="BoA">
+        <form action="php/table_transfer.php" method="post" >
         <table id="user_input">
             <tr class="input_row">
                 <td>
@@ -49,12 +50,15 @@ BANK OF ANDROMEDA HP
             <tr id="additionalRow">
                 <td colspan="5">
                     <script src="BoA_submit.js"></script>
-                    <button id="button" onclick="BoA_submit()">Submit</button>
+                    <button id="button" type="submit">Submit</button>
                 </td>
             </tr>
         </table>
+        </form>
+
         <h2>Transaction History</h2>
         <table id="transaction_table">
+            <?php include 'php/fetch_table.php' ?>
             <tr>
                 <td>Acount</td>
                 <td>Total Paid</td>

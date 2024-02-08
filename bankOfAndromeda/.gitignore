@@ -1,0 +1,5 @@
+# ignoring sensitive php database info! #
+# TODO: put creds in external file and release these to be tracked
+
+php/fetch_table.php
+php/table_transfer.php
