@@ -1,0 +1,18 @@
+
+ALOZO
+- add delete functionality
+- add time stamp? and date? and primary key
+- add the final debt block with script 
+- figure out js vs php submit functiona (FINAL MATHING vs SERVER STUFF)
+- MAKE MATH SCRIPT
+- add $ to each numeric entry
+- stop mobile from recognizing phone numbers if value is long??
+- clean up database
+
+
+
+LDB
+
+- MAKE IT "PRETTY"
+- dont foret to add fart tones aAND tons of annoying tings
+- sell website to elon and daddy zuck

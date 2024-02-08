@@ -37,8 +37,8 @@ BANK OF ANDROMEDA HP
                         <option value="other">Other</option>
                     </select>
                 </td>
-                <td><input type="number" name="total_paid" placeholder="$0.00" class="numeric_field"></td>
-                <td><input type="number" name="ind_contribution" placeholder="$0.00" class="numeric_field"></td>
+                <td><input type="number" name="total_paid" placeholder="$0.00 TOTAL PAID" class="numeric_field"></td>
+                <td><input type="number" name="ind_contribution" placeholder="$0.00 IND COST" class="numeric_field"></td>
                 <td><input type="text" name="description" placeholder="Short Transaction Description"></td>
                 <td><select name="category">
                         <option value="travel" selected>Travel</option>
