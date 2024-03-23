@@ -12,8 +12,8 @@ CSS File
 
 body {
     background-color: #DEDEDE;
-    padding: 10px;
-    margin: 25px;
+    padding: 0px;
+    margin: 0px;
     color: white;
     background-attachment: fixed;
     background-size: cover;
@@ -74,9 +74,14 @@ transact_table{
     padding: 3%;
     /* border: 1px solid black; */
     border-radius: 50px;
-    background-color: #86B3D1;
+    background-color: #4D6D9A;
     margin-left: auto;
     margin-right: auto;
+}
+
+.background {
+    position: relative;
+    z-index: -1;
 }
 
 .center {
@@ -87,9 +92,10 @@ transact_table{
   }
 
 .BoA {
+    position: relative;
     text-align: center;
     width: 50%;
-    
+    z-index: 1;
     margin-bottom: 55px;
     font-size: .9em;
     color: #dcd8d8;
@@ -158,7 +164,7 @@ dropdown {
 
 .intro {
     padding: 25px;
-    background: rgba(27, 29, 28, 0.6);
+    background: #4D6D9A;
     border-radius: 5px;
     text-align: center;
     color: #e0e0e0;
@@ -208,7 +214,7 @@ dropdown {
     animation: text 3s;
 }
 
-.text1{
+.text_expand{
     color: white;
     font-size: 2.5em;
     font-weight: bold;
@@ -278,10 +284,10 @@ dropdown {
 
 #footer {
     background: rgba(27, 29, 28, 0.4);
-    margin-top: 53%;
+    margin-top: 20%;
     text-decoration: none;
     text-align: center;
-    padding: 25px;
+    padding: 0px;
     color: white;
 }
 
