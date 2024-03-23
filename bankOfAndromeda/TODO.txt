@@ -9,7 +9,7 @@ ALOZO
 - stop mobile from recognizing phone numbers if value is long??
 - clean up database
 - fix int inputs on index to floats/doubles
-
+- go skibbidy toilet on all the kids
 
 
 LDB
