@@ -28,16 +28,15 @@ Functionality WILL NOT WORK on this page
 
 <body>
     <div class="intro">
-        <img src="logo.png" />
-        <p>Welcome to the Bank of Andromeda (BoA).
-            <br /><br />This bank is tied directly to the Andromeda Black Hole system located in the Andromeda galaxy.
-            It is run by Daddy Zuck, Alozo and NB. <br />This bank is SUPER secure and can only be accessed within 1500.
-            <br />Please contact Ryan Beaver for customer service. Calls may be delayed due to the wormhole being down.
+        <img src="logo.png" class="center"/>
+        <div class="container">
+            <span class="text1"><br />Welcome to the Bank of Andromeda. We're so glad you could join us.</span>
+        </div>
     </div>
-
-    <div class="BoA">
+    <br/><br/>
+    <div class="BoA" class="center">
         <form action="php/table_transfer.php" method="post" >
-        <table id="user_input">
+        <table>
             <tr class="input_row">
                 <td>
                     <select name="payer">
@@ -48,8 +47,8 @@ Functionality WILL NOT WORK on this page
                 </td>
                 <td><input type="number" name="total_paid" placeholder="$0.00 TOTAL PAID" class="numeric_field"></td>
                 <td><input type="number" name="ind_contribution" placeholder="$0.00 IND COST" class="numeric_field"></td>
-                <td><input type="text" name="description" placeholder="Short Transaction Description"></td>
-                <td><select name="category">
+                <td><input type="text" name="description" placeholder="Short Transaction Description" class="description_box"></td>
+                <td><select name="category" class="dropdown">
                         <option value="travel" selected>Travel</option>
                         <option value="food">Food</option>
                         <option value="activities">Activities</option>
@@ -59,14 +58,14 @@ Functionality WILL NOT WORK on this page
             <tr id="additionalRow">
                 <td colspan="5">
                     <script src="BoA_submit.js"></script>
-                    <button id="button" type="submit">Submit</button>
+                    <button id="button" type="submit"><b>Submit</b></button>
                 </td>
             </tr>
         </table>
         </form>
-
-        <h2>Transaction History</h2>
-        <table id="transaction_table">
+        <br/><br/>
+        <h2 style="color:#5F6366">Transaction History</h2>
+        <transact_table id="transaction_table">
          <?php include 'php/fetch_table.php' ?> 
             <tr>
                 <td>Acount</td>
@@ -75,9 +74,13 @@ Functionality WILL NOT WORK on this page
                 <td>Description</td>
                 <td>Category</td>
             </tr>
-        </table>
+        </transact_table>
     </div>
 
 </body>
+
+<p id="footer"> This bank is tied directly to the Andromeda Black Hole system located in the Andromeda galaxy.
+        It is run by Daddy Zuck, Alozo and NB. <br />This bank is SUPER secure and can only be accessed within 1500.
+        <br /><br />Please contact Ryan Beaver for customer service. <br />Calls may be delayed as the wormhole is still under reconstruction.
 
 </html>

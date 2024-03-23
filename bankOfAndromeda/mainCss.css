@@ -11,13 +11,13 @@ CSS File
 */
 
 body {
-    background: url('capyinspace.jpg');
+    background-color: #DEDEDE;
     padding: 10px;
     margin: 25px;
     color: white;
     background-attachment: fixed;
     background-size: cover;
-    font-family: serif;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 h1 {
@@ -54,36 +54,79 @@ input[type=text]:focus {
 p {
     text-align: center;
     font-size: 1.1em;
-
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 table{
+    display: inline-block;
     text-align: center;
-    padding: 5%;
-    border: 1px solid black;
+    padding: 3%;
+    /* border: 1px solid black; */
+    border-radius: 50px;
+    background-color: #4D6D9A;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+transact_table{
+    display: inline-block;
+    text-align: center;
+    padding: 3%;
+    /* border: 1px solid black; */
+    border-radius: 50px;
+    background-color: #86B3D1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
 
 .BoA {
     text-align: center;
-    width: 45%;
-    float: left;
+    width: 50%;
+    
     margin-bottom: 55px;
     font-size: .9em;
     color: #dcd8d8;
+    margin-left: auto;
+    margin-right: auto;
     
 }
 
 .numeric_field{
     width: 150px;
+    border-radius: 6px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+}
+
+.description_box{
+    width: 350px;
+    border-radius: 6px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+}
+
+dropdown {
+    width: 200px;
+    border-radius: 6px;
 }
 
 #button {
     padding: 10px;
     background: black;
     margin: 15px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    font-size: 1.5em;
+    font-family: 'Trebuchet MS', sans-serif;
+    border-radius: 10px;
     color: white;
-    width: 255px;
+    width: 20%;
     cursor: pointer;
 }
 
@@ -108,7 +151,7 @@ table{
     cursor: pointer;
   }
 
-  .addOptionButton:hover {
+.addOptionButton:hover {
     background-color: rgb(255, 255, 255);
     color:black;
   }
@@ -119,7 +162,6 @@ table{
     border-radius: 5px;
     text-align: center;
     color: #e0e0e0;
-
 }
 
 .decisions {
@@ -127,7 +169,87 @@ table{
     background: rgba(27, 29, 28, 0.4);
     padding: 25px;
     padding-top: 35px;
+}
 
+.fade-in-text {
+    font-size: 2.5em;
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    animation: left-to-right-fade-in 5s ease-in;
+    -webkit-mask-repeat: no-repeat;
+  }
+  
+@keyframes left-to-right-fade-in {
+    0% {
+      -webkit-mask-size: 0%;
+      -webkit-mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 90%,
+        rgba(0, 0, 0, 0)
+      );
+    }
+    100% {
+      -webkit-mask-size: 100%;
+      -webkit-mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 90%,
+        rgba(0, 0, 0, 0)
+      );
+    }
+}
+
+.container{
+    text-align: center;
+    width: 100%;
+}
+
+.container span{
+    display: block;
+    animation: text 3s;
+}
+
+.text1{
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+@keyframes text {
+    0%{
+        color: transparent;
+        letter-spacing: -3px;
+    }
+    50%{
+        letter-spacing: 3.5px;
+    }
+    100%{
+        letter-spacing: 3px;
+    }
+}
+
+.image{
+    flex:1;
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
+}
+
+
+.image img{
+    width: 100%;
+    object-fit: cover;
+    padding:5rem;
+}
+
+.push-right{
+    opacity: 0;
+    transform: translateX(50px);
+}
+.push-left{
+    opacity: 0;
+    transform: translateX(-50px);
 }
 
 #number {
@@ -160,7 +282,7 @@ table{
     text-decoration: none;
     text-align: center;
     padding: 25px;
-    color: grey;
+    color: white;
 }
 
 #footer a {
