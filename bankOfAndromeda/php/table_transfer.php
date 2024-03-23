@@ -1,4 +1,7 @@
 <?php
+
+// This fle writes the userinput into the sql table
+
 include 'creds.php';
 $conn = new mysqli($servername, $username, $password, $database);
 

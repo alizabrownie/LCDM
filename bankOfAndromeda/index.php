@@ -26,7 +26,6 @@ ALOZO y LDB
 <body>
     <div class="intro">
     <?php include 'php/calculations.php' ?>
-    <?php echo $; ?>
         <img src="logo.png" />
         <p>Welcome to the Bank of Andromeda (BoA).
             <br /><br />This bank is tied directly to the Andromeda Black Hole system located in the Andromeda galaxy.
@@ -73,15 +72,22 @@ ALOZO y LDB
         <h2>Transaction History</h2>
         <table id="transaction_table">
             <?php include 'php/fetch_table.php' ?>
+            <?php include 'php/delete.php' ?>
             <tr>
                 <td>Acount</td>
                 <td>Total Paid</td>
                 <td>Individual Contribution</td>
                 <td>Description</td>
                 <td>Category</td>
+                <td>Action</td>
             </tr>
         </table>
     </div>
+    <script>
+        function confirmDelete(rowId) {
+            return confirm("Are you sure you want to delete this row?");
+        }
+    </script>
 
 </body>
 

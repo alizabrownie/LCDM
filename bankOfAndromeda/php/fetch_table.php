@@ -1,4 +1,6 @@
 <?php
+// this file fetches the sql table from server and displays it in html
+
             include 'creds.php';
             $conn = new mysqli($servername, $username, $password, $database);
 
