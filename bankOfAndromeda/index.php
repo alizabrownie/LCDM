@@ -25,6 +25,8 @@ ALOZO y LDB
 
 <body>
     <div class="intro">
+    <?php include 'php/calculations.php' ?>
+    <?php echo $; ?>
         <img src="logo.png" />
         <p>Welcome to the Bank of Andromeda (BoA).
             <br /><br />This bank is tied directly to the Andromeda Black Hole system located in the Andromeda galaxy.
@@ -61,10 +63,8 @@ ALOZO y LDB
             </tr>
         </table>
         <div id="final_debt_block">
-        <?php include 'php/calculations.php' ?>
             <div id="alozo_debt">LDB Debt: $<?php echo $Xdebt; ?></div>
             <div id="LDB_debt">AB Debt: $<?php echo $Ydebt; ?></div>
-            <h2>Difference between max and min debt: $<?php echo $differenceDebt; ?></h2>
             <h2><?php echo $debtMessage; ?></h2>
         </div>
 

@@ -15,10 +15,6 @@ $result = $conn->query($sql);
 $Xdebt = 0;     // LDB Debt
 $Ydebt = 0;     // AB Debt
 
-$sql = "SELECT payer, total_paid, ind_contribution, description, category FROM transaction_table";
-// Print the SQL query for debugging
-echo "SQL Query: " . $sql . "<br>";
-
 // Organize entries by payer and calculate debts
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
@@ -54,9 +50,11 @@ if ($maxDebt == $Xdebt) {
 // Determine the debt message
 $debtMessage = '';
 if ($maxPayer == 'nBrown') {
-    $debtMessage = 'AB owes this to LDB';
+    $debtMessage = 'AB owes $' . $differenceDebt . ' to LDB';
 } elseif ($maxPayer == 'aBrown') {
-    $debtMessage = 'LDB owes this to AB';
+    $debtMessage = 'LDB owes $' . $differenceDebt . ' to AB';
 }
+
+$funny = 'HOLA LDB!!! HOW R U DOIN????? MOOGOGOGO COWOWOWO!!!'
 
 ?>
