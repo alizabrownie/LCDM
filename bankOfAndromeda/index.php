@@ -60,6 +60,14 @@ ALOZO y LDB
                 </td>
             </tr>
         </table>
+        <div id="final_debt_block">
+        <?php include 'php/calculations.php' ?>
+            <div id="alozo_debt">LDB Debt: $<?php echo $Xdebt; ?></div>
+            <div id="LDB_debt">AB Debt: $<?php echo $Ydebt; ?></div>
+            <h2>Difference between max and min debt: $<?php echo $differenceDebt; ?></h2>
+            <h2><?php echo $debtMessage; ?></h2>
+        </div>
+
         </form>
 
         <h2>Transaction History</h2>
