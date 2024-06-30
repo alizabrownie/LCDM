@@ -44,8 +44,8 @@ ALOZO y LDB
                         <option value="other">Other</option>
                     </select>
                 </td>
-                <td><input type="number" name="total_paid" placeholder="$0.00 TOTAL PAID" class="numeric_field"></td>
-                <td><input type="number" name="ind_contribution" placeholder="$0.00 IND COST" class="numeric_field"></td>
+                <td><input type="number" step=".01" name="total_paid" placeholder="$0.00 TOTAL PAID" class="numeric_field"></td>
+                <td><input type="number" step=".01" name="ind_contribution" placeholder="$0.00 IND COST" class="numeric_field"></td>
                 <td><input type="text" name="description" placeholder="Short Transaction Description"></td>
                 <td><select name="category">
                         <option value="travel" selected>Travel</option>
@@ -72,7 +72,7 @@ ALOZO y LDB
         <h2>Transaction History</h2>
         <table id="transaction_table">
             <?php include 'php/fetch_table.php' ?>
-            <?php include 'php/delete.php' ?>
+            <!-- <?php include 'php/delete.php' ?> -->
             <tr>
                 <td>Acount</td>
                 <td>Total Paid</td>
@@ -83,11 +83,11 @@ ALOZO y LDB
             </tr>
         </table>
     </div>
-    <script>
+   <!-- <script>
         function confirmDelete(rowId) {
             return confirm("Are you sure you want to delete this row?");
         }
-    </script>
+    </script> -->
 
 </body>
 

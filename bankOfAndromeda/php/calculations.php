@@ -1,4 +1,7 @@
 <?php
+
+// this file does the calculations for the final debt block!
+
 include 'creds.php';
 $conn = new mysqli($servername, $username, $password, $database);
 
@@ -12,8 +15,8 @@ $sql = "SELECT payer, total_paid, ind_contribution, description, category FROM t
 $result = $conn->query($sql);
 
 // Initialize associative arrays to store debts for each payer
-$Xdebt = 0;     // LDB Debt
-$Ydebt = 0;     // AB Debt
+$Xdebt = 0.0;     // LDB Debt
+$Ydebt = 0.0;     // AB Debt
 
 // Organize entries by payer and calculate debts
 if ($result->num_rows > 0) {
