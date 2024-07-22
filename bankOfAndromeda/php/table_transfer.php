@@ -2,6 +2,10 @@
 
 // This fle writes the userinput into the sql table
 
+// TO DELETE MANUALLY
+// DELETE FROM transaction_table WHERE description = 'XXX';
+
+
 include 'creds.php';
 $conn = new mysqli($servername, $username, $password, $database);
 
