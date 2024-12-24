@@ -23,6 +23,11 @@ function addChoiceField() {
 
     var newChoiceLabel = document.createTextNode('Choice ' + nextChoiceLabel + ': ');
 
+    if (decisionsContainer.children.length / 3 >= 10) { // limit 15
+        alert('You can only add up to 15 choices.');
+        return;
+    }
+
     var newChoiceInput = document.createElement('input');
     newChoiceInput.type = 'text';
     newChoiceInput.placeholder = 'Enter Another Choice ';
@@ -167,27 +172,66 @@ function evenAlgorithm() {
     // }
 }
 
+// This is the odd algorithm
 function oddAlgorithm() {
     console.log("entering odd alg");
+    var allOptions = getAllOptions();
+    console.log(allOptions);
 }
 
+// WIP, this function favors the last value in array so no use yet
+function randomChoiceReduce(array) {
+
+    while (array.length > 1) {
+        let newArray = [];
+        
+        // Pair adjacent elements and choose randomly
+        for (let i = 0; i < array.length - 1; i += 2) {
+            let choice = Math.random() < 0.5 ? array[i] : array[i + 1];
+            newArray.push(choice);
+        }
+        
+        // If the array has an odd number of elements, keep the last one
+        if (array.length % 2 === 1) {
+            newArray.push(array[array.length - 1]);
+        }
+
+        array = newArray; // Update the array with the reduced array
+    }
+    
+    const finalChoice = array[0]; // The single remaining element
+
+    return finalChoice;
+}
+
+function simpleRandChoice(array) {
+    const randomIndex = rand(0, array.length);
+    const randomChoice = array[randomIndex];
+    const probablity = 100 / array.length;
+    console.log(randomIndex);
+    return { randomChoice, probablity };
+}
 
 // ---------------------------------------------- MAIN CODE FIRES ----------------------------------------------
 
 // This is the multiple choice algorithm and called when #button is pressed
 function submitMultiple() {
 
-    console.log(assignPairs(["ds", "ijfdiofjioj"]));
+    var allOptions = getAllOptions();
+    var final = simpleRandChoice(allOptions);
 
-    var eoBool = checkEvenOdd(); // returns either 1 or 0, odd or even
-    // enter the respective algorithm
-    if (eoBool == 0) {
-        evenAlgorithm();
-    }
-    else {
-        oddAlgorithm();
-    }
+// Show user numbers in html
+    var getid = document.getElementById("eochoice");
+    getid.innerHTML = final.randomChoice;
+    var getid2 = document.getElementById("prob");
+    getid2.innerHTML = Math.round(final.probablity) + '%';
     document.getElementById("button").innerHTML = "Rediscover Your Doom (Try Again)";
+
+// lucky numbers
+    document.getElementById("rplace").innerHTML = rand(1, 100000000);;
+    document.getElementById("rplace2").innerHTML = rand(1, 100000000);;
+    document.getElementById("rplace3").innerHTML = rand(1, 100000000);;
+
 }
 
 
