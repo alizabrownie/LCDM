@@ -1,5 +1,7 @@
 # LCDM (Life Choice Decision Maker)
 
+### Plus some really whacky spin offs...
+
 <hr/>
 
 For when you just can't decide...
