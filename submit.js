@@ -11,6 +11,8 @@ Font creds: KnackpackStudio
 
 */
 
+// THIS CODE is OBS for the multiple option LCDM
+
 function submit() {
     //getid vars are for replacing HTML with the puedo var values
     var getid = document.getElementById("eochoice");

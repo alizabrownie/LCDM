@@ -39,15 +39,16 @@ Font creds: KnackpackStudio
     <br />
     <div class="decisions">
         Choice A: <input type="text" id="choice1" placeholder="Enter a Choice" value="" /><br />
-        Choice B: <input type="text" id="choice2" placeholder="Enter Another Choice" value="" />
-        <div style="text-align:center;">
-            <button id="button" onclick="submit()">Discover Your Doom</button>
-        </div>
+        Choice B: <input type="text" id="choice2" placeholder="Enter Another Choice" value="" /><br/>
+    </div>
+    <div style="text-align:center;">
+        <button class="addOptionButton" onclick="addChoiceField()">+</button>
+        <button id="button" onclick="submitMultiple()">Discover Your Doom</button>
     </div>
     <div class="answers">
         <div id="number">
             <h2>
-                Your Random Numbers are...<br />
+                Your Lucky Numbers are...<br />
                 <hr
                     style="opacity: .6;border:none;color:white;height:1px;background:black;background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#fff), to(#000));" />
                 <h3 id="rplace">X
@@ -59,7 +60,7 @@ Font creds: KnackpackStudio
                 </h3>
             </h2>
             <div id="checkeo">
-                Your Key
+                Individual Probability <span id="prob"></span>
             </div>
         </div>
         <div id="doom">
@@ -77,9 +78,10 @@ Font creds: KnackpackStudio
         <a class="pop" onclick="func2()">Changes</a>
         <span id="cr" style="text-align:right;float:right;font-size:.8em;">&copy 2018, ABMessier</span>
     </div>
-    <div id="info" style="">
+    <div id="info">
     </div>
-    <script src="submit.js"></script>
+    <script src="multipleOptionAlg.js"></script>
     <script src="footerLinks.js"></script>
 </body>
+
 </html>
