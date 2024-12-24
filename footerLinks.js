@@ -18,7 +18,7 @@ function func1() {
 }
 
 function func2() {
-    document.getElementById("info").innerHTML = "08.05.18 // Uploaded for Google indexing <br/> 08.02.18 // Released on server ";
+    document.getElementById("info").innerHTML = "12.24.24 // Added multiple option (up to 15) functionality <br/> 08.05.18 // Uploaded for Google indexing <br/> 08.02.18 // Released on server ";
     document.getElementById("info").style.visibility = "visible";
 
 }
