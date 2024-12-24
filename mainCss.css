@@ -1,0 +1,226 @@
+/*
+
+  _    ___ ___  __  __    ___         _     
+ | |  / __|   \|  \/  |  / __|___  __| |___ 
+ | |_| (__| |) | |\/| | | (__/ _ \/ _` / -_)
+ |____\___|___/|_|  |_|  \___\___/\__,_\___|
+                                             © AlizaBrown aka Messier
+
+All code is original, a simple, three way number randomizing program.
+Font creds: KnackpackStudio
+
+*/
+
+body {
+    background: url('gal2.jpg');
+    padding: 10px;
+    margin: 25px;
+    color: white;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+canvas {
+    border: 2px solid white;
+    width: 100%;
+    height: 600px;
+}
+
+input {
+    width: 500px;
+    padding: 4px;
+    margin: 3px;
+    border: 1px solid black;
+}
+
+input:focus {
+    border: 1px solid white;
+}
+
+input[type=text]:focus {
+    background: #cccccc;
+    border: 1px solid black;
+    outline: none;
+}
+
+p {
+    text-align: center;
+    font-size: 1.1em;
+
+}
+
+#button {
+    padding: 10px;
+    background: black;
+    margin: 15px;
+    border: 1px solid white;
+    color: white;
+    width: 255px;
+    cursor: pointer;
+}
+
+#button:after {
+    content: "";
+}
+
+#button:hover {
+    color: black;
+    background: #b4b0b0;
+}
+
+.addOptionButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(100, 100, 100);  
+    color: #ffffff;  
+    font-size: 20px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .addOptionButton:hover {
+    background-color: rgb(255, 255, 255);
+    color:black;
+  }
+
+.intro {
+    padding: 25px;
+    background: rgba(27, 29, 28, 0.4);
+    border-radius: 5px;
+    text-align: center;
+    color: #e0e0e0;
+
+}
+
+.decisions {
+    text-align: center;
+    background: rgba(27, 29, 28, 0.4);
+    padding: 25px;
+    padding-top: 35px;
+
+}
+
+#number {
+    width: 45%;
+    text-align: center;
+    float: left;
+    margin-bottom: 55px;
+    font-size: .9em;
+    color: #b1adad;
+}
+
+#doom {
+    width: 45%;
+    float: right;
+    margin-top: 2%;
+    word-wrap: break-word;
+}
+
+#eochoice {
+    background: rgba(227, 237, 34, 0.2);
+    padding: 28px;
+    height: auto;
+    border: 1px dotted grey;
+    font-size: 1.2em;
+}
+
+#footer {
+    background: rgba(27, 29, 28, 0.4);
+    margin-top: 53%;
+    text-decoration: none;
+    text-align: center;
+    padding: 25px;
+    color: grey;
+}
+
+#footer a {
+    text-decoration: none;
+    color: grey;
+    text-align: center;
+    cursor: pointer;
+}
+
+#footer a:hover {
+    text-decoration: none;
+    color: #75a5ff;
+    text-align: center;
+}
+
+#info {
+    visibility: hidden;
+    background: rgba(69, 69, 69, 0.5);
+    padding: 25px;
+    text-align: center;
+    color: #646464;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width : 420px) {
+    img {
+        width: 99%;
+    }
+
+    .decisions {
+        text-align: center;
+        background: rgba(27, 29, 28, 0.4);
+        padding: 5px;
+        padding-top: 15px;
+    }
+
+    .intro {
+        padding: 25px;
+        background: rgba(27, 29, 28, 0.4);
+        border-radius: 5px;
+        text-align: center;
+        color: #e0e0e0;
+        font-size: .9em;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    #number {
+        display: none;
+    }
+
+    #doom {
+        width: 95%;
+        padding: 2px;
+        margin-top: 2%;
+        word-wrap: break-word;
+        font-size: .9em;
+        margin-right: 5px;
+        margin-bottom: 15px;
+    }
+
+    #footer {
+        font-size: .6em;
+        padding: 15px;
+        margin-top: 92%;
+    }
+
+    #cr {
+        display: none;
+    }
+
+    #info {
+        font-size: .8em;
+        padding: 15px;
+    }
+}

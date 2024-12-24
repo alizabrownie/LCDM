@@ -14,351 +14,74 @@ Font creds: KnackpackStudio
 -->
 
 <html>
-    <head>
-        <title>L C D M</title>
-			<meta name="description" content="lcdm">
-			<meta name="keywords" content="lcdm,decisions">
-			<meta name="author" content="Aliza Brown">
-			<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-        <style>
-            body{
-                background: url('gal2.jpg');
-                padding: 10px;
-                margin: 25px;
-                color: white;
-                background-attachment: fixed;
-                background-size: cover;
-                font-family: serif;
-            }
-            h1 {
-                text-align: center;
-            }
-            h4{
-                text-align: center;
-            }
-            canvas{
-                border: 2px solid white;
-                width:100%;
-                height: 600px;
-            }
-            input{
-                width:500px;
-                padding: 4px;
-                margin: 3px;
-                border: 1px solid black;
-            }
-            input:focus{
-                border: 1px solid white;
-            }
-			input[type=text]:focus{
-				background:#cccccc;
-				border:1px solid black;
-				outline:none;
-				}
-            p{
-                text-align: center;
-                font-size: 1.1em;
 
-            }
-            button{
-                padding: 10px;
-                background: black;
-                margin: 15px;
-                border: 1px solid white;
-                color: white;
-                width:255px;
-				cursor: pointer;
-            }
-            #button:after{
-                content: "";
-            }
-            button:hover{
-                color: black;
-                background: #b4b0b0;
-            }
-            .intro{
-                padding: 25px;
-                background: rgba(27, 29, 28, 0.4);
-                border-radius: 5px;
-                text-align: center;
-                color: #e0e0e0;
-                
-            }
-            .decisions{
-                text-align: center;
-                background: rgba(27, 29, 28, 0.4);
-                padding: 25px;
-                padding-top: 35px;
+<head>
+    <title>L C D M</title>
+    <meta name="description" content="lcdm">
+    <meta name="keywords" content="lcdm,decisions">
+    <meta name="author" content="Aliza Brown">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="mainCss.css" />
+</head>
 
-            }
-            #number{
-                width:45%;
-                text-align: center;
-                float: left;
-                margin-bottom: 55px;
-                font-size:.9em;
-                color:#b1adad;
-            }
-            #doom{
-                width:45%;
-                float: right;
-                margin-top: 2%;
-                word-wrap: break-word;
-            }
-            #eochoice{
-                background: rgba(227, 237, 34, 0.2); 
-                padding: 28px;
-                height:auto;
-                border:1px dotted grey;
-                font-size: 1.2em;
-            }
-            #footer{
-                background:rgba(27, 29, 28, 0.4);
-                margin-top: 53%;
-                text-decoration: none;
-                text-align: center;
-                padding: 25px;
-                color: grey;
-				}
-            #footer a{
-                text-decoration: none;
-                color:grey;
-                text-align: center;
-				cursor: pointer;
-            }
-            #footer a:hover{
-                text-decoration: none;
-                color:#75a5ff;
-                text-align: center;
-            }
-            #info{
-                visibility: hidden;
-                background:rgba(69, 69, 69, 0.5); 
-                padding:25px; 
-                text-align:center;
-                color: #646464;
-                margin-top: 10px;
-            }
-			
-			@media only screen and (max-width : 420px) {
-			img {
-				width:99%;
-			}
-			.decisions{
-                text-align: center;
-                background: rgba(27, 29, 28, 0.4);
-                padding: 5px;
-                padding-top: 15px;
-            }
-			.intro{
-                padding: 25px;
-                background: rgba(27, 29, 28, 0.4);
-                border-radius: 5px;
-                text-align: center;
-                color: #e0e0e0;
-				font-size:.9em;
-			}
-			input{
-				width:90%;
-				}
-			button{
-				width:90%;
-				}
-			#number{
-				display:none;
-				}
-			#doom{
-				width:95%;
-				padding:2px;
-                margin-top: 2%;
-                word-wrap: break-word;
-				font-size:.9em;
-				margin-right:5px;
-				margin-bottom:15px;
-				}
-			#footer{
-				font-size:.6em;
-				padding:15px;
-				margin-top:92%;
-				}
-			#cr{
-				display:none;
-				}
-			#info{
-				font-size:.8em;
-				padding:15px;
-				}
-			}
-        </style>
-    </head>
-    <body>
-        <div class="intro">
-            <img src="logo.png"/>
-        <h1><img src="full.png"/></h1>
+<body>
+    <div class="intro">
+        <img src="logo.png" />
+        <h1><img src="full.png" /></h1>
         <h4>For when you just can't decide...</h4>
-        <p >Have a rough decision to make? Can't make up your mind? Use the LCDM to randomly select between two choices, whether it be what food you want to eat to which college you want to attend. Let the LCDM take care of it for you. 
-        <br/><br/>There's no harm in letting a computer program run your life, probably.
-        </div>
-        <hr style="opacity: .6;border:none;color:white;height:1px;background:black;background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#fff), to(#8a8a8a));"/><br/>
-        <div class="decisions">
-            Choice A: <input type="text" id="choice1" placeholder="Enter a Choice" value=""/><br/>
-            Choice B: <input type="text" id="choice2" placeholder="Enter Another Choice" value=""/>
-        <div style="text-align:center;">
-             <button id="button" onclick="submit()">Discover Your Doom</button>
-        </div>
-        </div>
-        <div class="answers">
-            <div id="number">
-                <h2>
-                    Your Random Numbers are...<br/><hr style="opacity: .6;border:none;color:white;height:1px;background:black;background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#fff), to(#000));"/>
-                    <h3 id="rplace">X
-                        <h2 id="rplace2">Y
-                            <h1 id="rplace3">Z
-                            
-                            </h1>
-                        </h2>
-                    </h3>
-                </h2>
-                <div id="checkeo">
-                    Your Key
-                </div>
+        <p>Have a rough decision to make? Can't make up your mind? Use the LCDM to randomly select between two choices,
+            whether it be what food you want to eat to which college you want to attend. Let the LCDM take care of it
+            for you.
+            <br /><br />There's no harm in letting a computer program run your life, probably.
+    </div>
+    <hr
+        style="opacity: .6;border:none;color:white;height:1px;background:black;background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#fff), to(#8a8a8a));" />
+    <br />
+    <div class="decisions">
+        Choice A: <input type="text" id="choice1" placeholder="Enter a Choice" value="" /><br />
+        Choice B: <input type="text" id="choice2" placeholder="Enter Another Choice" value="" /><br/>
+    </div>
+    <div style="text-align:center;">
+        <button class="addOptionButton" onclick="addChoiceField()">+</button>
+        <button id="button" onclick="submitMultiple()">Discover Your Doom</button>
+    </div>
+    <div class="answers">
+        <div id="number">
+            <h2>
+                Your Lucky Numbers are...<br />
+                <hr
+                    style="opacity: .6;border:none;color:white;height:1px;background:black;background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#fff), to(#000));" />
+                <h3 id="rplace">X
+                    <h2 id="rplace2">Y
+                        <h1 id="rplace3">Z
+
+                        </h1>
+                    </h2>
+                </h3>
+            </h2>
+            <div id="checkeo">
+                Individual Probability <span id="prob"></span>
             </div>
-            <div id="doom">
-                <h2 style="text-align:center;">Your Fate Says...</h2><p id="eochoice">
-                    
-                </p>
-            </div>
         </div>
-        <div id="footer">
-            <a class="pop" onclick="func1()">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-			<a class="pop" onclick="func3()">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://goo.gl/forms/lFjgsIyYmwinGbGy1" target="_new">Feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="pop" onclick="func2()">Changes</a>
-            <span id="cr" style="text-align:right;float:right;font-size:.8em;">&copy 2018, ABMessier</span>
+        <div id="doom">
+            <h2 style="text-align:center;">Your Fate Says...</h2>
+            <p id="eochoice">
 
-                <script>
-                function func1() {
-                    document.getElementById("info").innerHTML="This site does NOT use cookies, track any user data (Google Analytics) or store IP addresses. All scripts are embedded within this site. Once the page loads, you are secure. However this site does NOT use SSL, so as long as you do not put credit card numbers into it (ummmm, why would you anyway?), you will be fine. Paranoia is strong my friend. Feel free to check the source code if you want peace of mind.";
-                    document.getElementById("info").style.visibility = "visible";
-
-                }
-                </script>
-                <script>
-                function func2() {
-                    document.getElementById("info").innerHTML="08.05.18 // Uploaded for Google indexing <br/> 08.02.18 // Released on server ";
-                    document.getElementById("info").style.visibility = "visible";
-
-                }
-                </script>
-				<script>
-                function func3() {
-                    document.getElementById("info").innerHTML="The owner of this site is not responsible for the choices that you choose based on what this program tells you. The owner IS responsible for her own choices she makes based on this program! Remember, even if your fate says one thing, you can always take the other way. The computer does not yet have full control of you. I don't care how you use the LCDM, just don't leave negative feedback when you get in trouble because your fate said to skip class more than once. ";
-                    document.getElementById("info").style.visibility = "visible";
-
-                }
-                </script>
+            </p>
         </div>
-        <div id="info" style="">
-        
-        </div>
-    </body>
-        
-        <script>
-        function submit(){
-        //getid vars are for replacing HTML with the puedo var values
-            var getid=document.getElementById("eochoice");
-            var getid2=document.getElementById("checkeo");
-        //puedo vars are for getting values from random inputs
-            var puedo1=document.getElementById("choice1").value;
-            var puedo2=document.getElementById("choice2").value;      
-            var check;
-            var rnum=rand(1,100000000);     
-                function rand(min,max){
-                    var rnum=Math.floor(Math.random()*(max-min))+min;
-                    return rnum;
-                }
-            document.getElementById("rplace").innerHTML=rnum;
-// Structure: if rnum (e/o) generate new rnum1-3, if new rnum is e/o, do 
-// START MAIN IF STATEMENT for rnum
-//even is choice 1 odd is 2
-            if(rnum % 2==0){
-                var rnum2=rand(1,100000000);
-                        document.getElementById("rplace2").innerHTML=rnum2;
-                    if (rnum2%2==0){
-                        var rnum3=rand(1,100000000);                                                                                     document.getElementById("rplace3").innerHTML="[ " + rnum3 + " ]";
-                            if (rnum3%2==0){
-                                getid.innerHTML=puedo1;
-                                getid2.innerHTML="E 1 <br/> O 2";
-                            }
-                            else if(rnum3%2!=0){
-                                getid.innerHTML=puedo2;
-                                getid2.innerHTML="E 2 <br/> O 1";
-                            }
-                        
-                    }
-                    else if(rnum2%2!=0){
-                        var rnum2=rand(1,100000000);
-                                document.getElementById("rplace2").innerHTML=rnum2;
-                            if (rnum2%2==0){
-                                var rnum3=rand(1,100000000);
-                                    document.getElementById("rplace3").innerHTML="[ " + rnum3 + " ]";
-                                    if (rnum3%2==0){
-                                        getid.innerHTML=puedo1;
-                                        getid2.innerHTML="E 1 <br/> O 2";
-                                    }
-                                    else if(rnum3%2!=0){
-                                        getid.innerHTML=puedo2;
-                                        getid2.innerHTML="E 2 <br/> O 1";
-                                    }
-                                    }
-                            else if(rnum2%2!=0){
-                                var rnum3=rand(1,100000000);
-                                        document.getElementById("rplace3").innerHTML="[ " + rnum3 + " ]";
-                                    if (rnum3%2==0){
-                                        getid.innerHTML=puedo1;
-                                        getid2.innerHTML="E 1 <br/> O 2";
-                                    }
-                                    else if(rnum3%2!=0){
-                                        getid.innerHTML=puedo2;
-                                        getid2.innerHTML="E 2 <br/> O 1";
-                                    }
-                                    }
-                                    } 
-// MAIN ELSE STATEMENT for rnum
-            }
-            else{
-                var rnum2=rand(1,100000000);
-                        document.getElementById("rplace2").innerHTML=rnum2;
-                    if (rnum2%2==0){
-                        var rnum3=rand(1,100000000);
-                            document.getElementById("rplace3").innerHTML="{ " + rnum3 + " }";
-                                if (rnum3%2==0){
-                                    getid.innerHTML=puedo1;
-                                    getid2.innerHTML="E 1 <br/> O 2";
-                                    }
-                                else if(rnum3%2!=0){
-                                     getid.innerHTML=puedo2;
-                                     getid2.innerHTML="E 2 <br/> O 1";
-                                    }
-                    }
-                    else if(rnum2%2!=0){
-                        var rnum3=rand(1,100000000);
-                            document.getElementById("rplace3").innerHTML="{ " + rnum3 + " }";
-                                if (rnum3%2==0){
-                                     getid.innerHTML=puedo1;
-                                    getid2.innerHTML="E 1 <br/> O 2";
-                                    }
-                                else if(rnum3%2!=0){
-                                    getid.innerHTML=puedo2;
-                                    getid2.innerHTML="E 2 <br/> O 1";
-                                    }
-                    }
-            }
-            document.getElementById("button").innerHTML="Rediscover Your Doom (Try Again)";
-        }
-//HELPFUL TIP -- [else] & {if}
-//O -> e2 & E -> e1
-        </script>
-
+    </div>
+    <div id="footer">
+        <a class="pop" onclick="func1()">Privacy</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="pop" onclick="func3()">Terms</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://goo.gl/forms/lFjgsIyYmwinGbGy1"
+            target="_new">Feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="pop" onclick="func2()">Changes</a>
+        <span id="cr" style="text-align:right;float:right;font-size:.8em;">&copy 2018, ABMessier</span>
+    </div>
+    <div id="info">
+    </div>
+    <script src="multipleOptionAlg.js"></script>
+    <script src="footerLinks.js"></script>
 </body>
+
 </html>
